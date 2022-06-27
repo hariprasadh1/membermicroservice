@@ -14,34 +14,34 @@ namespace membermicroservice.Repository
             {
               policyid=1,
               memberid=1,
-              membername="AMIT",
+              membername="Hariprasadh",
               subscriptiondate="XXX",
               locationid=1,
-              locationname="ULTADANGA",
+              locationname="Madurai",
               hospitalid=2,
-              hospitalname="CMRI",
+              hospitalname="Velammal",
               topupfrequency=2
             },
             new memberpolicy()
             {
               policyid=1,
               memberid=2,
-              membername="RAM",
+              membername="Charulatha",
               subscriptiondate="XXX",
               locationid=1,
-              locationname="ULTADANGA",
+              locationname="Chennai",
               hospitalid=3,
-              hospitalname="NRS",
+              hospitalname="GH",
               topupfrequency=1
             },
             new memberpolicy()
             {
               policyid=2,
               memberid=3,
-              membername="SUBHAM",
+              membername="Anjali",
               subscriptiondate="XXX",
               locationid=2,
-              locationname="PARK STREET",
+              locationname="Kolkata",
               hospitalid=3,
               hospitalname="NRS",
               topupfrequency=0
@@ -50,24 +50,13 @@ namespace membermicroservice.Repository
             {
               policyid=1,
               memberid=4,
-              membername="ARGHYA",
+              membername="Aishwarya",
               subscriptiondate="XXX",
               locationid=3,
-              locationname="SEALDAH",
+              locationname="Coimbatore",
               hospitalid=1,
-              hospitalname="AMRI",
+              hospitalname="CGH",
               topupfrequency=2
-            },
-            new memberpolicy()
-            {
-              policyid=2,
-              memberid=5,//given
-              membername="SUJOY",
-              subscriptiondate="XXX",
-              locationid=2,//
-              locationname="PARK STREET",
-              hospitalid=1,//
-              hospitalname="AMRI"
             }
         };
     }
