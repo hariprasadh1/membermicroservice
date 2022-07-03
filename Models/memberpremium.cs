@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Models
 {
-    public class memberpremium
+    public class Memberpremium
     {
-        public int memberid { get; set; }
-        public int policyid { get; set; }
-        public int topup { get; set; }
-        public int premium { get; set; }
-        public string paiddate { get; set; }
+        public int Memberid { get; set; }
+        public int Policyid { get; set; }
+        public int Topup { get; set; }
+        public int Premium { get; set; }
+        public string Paiddate { get; set; }
     }
 }

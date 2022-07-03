@@ -6,57 +6,57 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Repository
 {
-    public class memberpolicyrepo
+    public class Memberpolicyrepo
     {
-        public static List<memberpolicy> m = new List<memberpolicy>()
+        public static List<Memberpolicy> m = new List<Memberpolicy>()
         {
-            new memberpolicy()
+            new Memberpolicy()
             {
-              policyid=1,
-              memberid=1,
-              membername="Hariprasadh",
-              subscriptiondate="XXX",
-              locationid=1,
-              locationname="Madurai",
-              hospitalid=2,
-              hospitalname="Velammal",
-              topupfrequency=2
+              Policyid=1,
+              Memberid=1,
+              Membername="Hariprasadh",
+              Subscriptiondate="XXX",
+              Locationid=1,
+              Locationname="Madurai",
+              Hospitalid=2,
+              Hospitalname="Velammal",
+              Topupfrequency=2
             },
-            new memberpolicy()
+            new Memberpolicy()
             {
-              policyid=1,
-              memberid=2,
-              membername="Charulatha",
-              subscriptiondate="XXX",
-              locationid=1,
-              locationname="Chennai",
-              hospitalid=3,
-              hospitalname="GH",
-              topupfrequency=1
+              Policyid=1,
+              Memberid=2,
+              Membername="Charulatha",
+              Subscriptiondate="XXX",
+              Locationid=1,
+              Locationname="Chennai",
+              Hospitalid=3,
+              Hospitalname="GH",
+              Topupfrequency=1
             },
-            new memberpolicy()
+            new Memberpolicy()
             {
-              policyid=2,
-              memberid=3,
-              membername="Anjali",
-              subscriptiondate="XXX",
-              locationid=2,
-              locationname="Kolkata",
-              hospitalid=3,
-              hospitalname="NRS",
-              topupfrequency=0
+              Policyid=2,
+              Memberid=3,
+              Membername="Anjali",
+              Subscriptiondate="XXX",
+              Locationid=2,
+              Locationname="Kolkata",
+              Hospitalid=3,
+              Hospitalname="NRS",
+              Topupfrequency=0
             },
-            new memberpolicy()
+            new Memberpolicy()
             {
-              policyid=1,
-              memberid=4,
-              membername="Aishwarya",
-              subscriptiondate="XXX",
-              locationid=3,
-              locationname="Coimbatore",
-              hospitalid=1,
-              hospitalname="CGH",
-              topupfrequency=2
+              Policyid=1,
+              Memberid=4,
+              Membername="Aishwarya",
+              Subscriptiondate="XXX",
+              Locationid=3,
+              Locationname="Coimbatore",
+              Hospitalid=1,
+              Hospitalname="CGH",
+              Topupfrequency=2
             }
         };
     }

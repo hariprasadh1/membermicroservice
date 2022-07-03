@@ -6,58 +6,58 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Repository
 {
-    public class memberpremiumrepo : Imemberpremiumrepo
+    public class Memberpremiumrepo : IMemberpremiumrepo
     {
-        public List<memberpremium> m = new List<memberpremium>()
+        public List<Memberpremium> m = new List<Memberpremium>()
         {
-         new memberpremium()
+         new Memberpremium()
          {
-             memberid=1,
-             policyid=1,
-             topup=1000,
-             premium=2000,
-             paiddate=new DateTime(2022,06,20).ToString("dd/MM/yyyy")
+             Memberid=1,
+             Policyid=1,
+             Topup=1000,
+             Premium=2000,
+             Paiddate=new DateTime(2022,06,20).ToString("dd/MM/yyyy")
          },
-         new memberpremium()
+         new Memberpremium()
          {
-             memberid=1,
-             policyid=1,
-             topup=1000,
-             premium=2000,
-             paiddate=new DateTime(2022,06,22).ToString("dd/MM/yyyy")
+             Memberid=1,
+             Policyid=1,
+             Topup=1000,
+             Premium=2000,
+             Paiddate=new DateTime(2022,06,22).ToString("dd/MM/yyyy")
          },
-         new memberpremium()
+         new Memberpremium()
          {
-             memberid=2,
-             policyid=1,
-             topup=1000,
-             premium=2000,
-             paiddate=new DateTime(2022,06,21).ToString("dd/MM/yyyy")
+             Memberid=2,
+             Policyid=1,
+             Topup=1000,
+             Premium=2000,
+             Paiddate=new DateTime(2022,06,21).ToString("dd/MM/yyyy")
          },
-         new memberpremium()
+         new Memberpremium()
          {
-             memberid=4,
-             policyid=1,
-             topup=1500,
-             premium=2000,
-             paiddate=new DateTime(2022,06,23).ToString("dd/MM/yyyy")
+             Memberid=4,
+             Policyid=1,
+             Topup=1500,
+             Premium=2000,
+             Paiddate=new DateTime(2022,06,23).ToString("dd/MM/yyyy")
          },
-          new memberpremium()
+          new Memberpremium()
          {
-             memberid=4,
-             policyid=1,
-             topup=4000,
-             premium=5000,
-             paiddate=new DateTime(2022,06,24).ToString("dd/MM/yyyy")
+             Memberid=4,
+             Policyid=1,
+             Topup=4000,
+             Premium=5000,
+             Paiddate=new DateTime(2022,06,24).ToString("dd/MM/yyyy")
          }
 };
     
-            public  List<memberpremium> getViewBills(int mid, int pid)
+            public  List<Memberpremium> GetViewBills(int mid, int pid)
             {
-            List<memberpremium> memberp = new List<memberpremium>();
+            List<Memberpremium> memberp = new List<Memberpremium>();
            foreach(var item in m)
             {
-                if(item.memberid == mid && item.policyid==pid)
+                if(item.Memberid == mid && item.Policyid==pid)
                 {
                     memberp.Add(item);
                 }

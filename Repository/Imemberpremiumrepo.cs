@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Repository
 {
-    public interface Imemberpremiumrepo
+    public interface IMemberpremiumrepo
     {
       //  public  List<memberpremium> fun();
-        public List<memberpremium> getViewBills(int mid, int pid);
+        public List<Memberpremium> GetViewBills(int mid, int pid);
 
 
     }

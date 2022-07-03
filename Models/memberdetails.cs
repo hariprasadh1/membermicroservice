@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Models
 {
-    public class memberdetails
+    public class Memberdetails
     {
-        public int memberid { get; set; }
-        public string membername { get; set; }
-        public string phonenumber { get; set; }
-        public int salary { get; set; }
-        public string gender { get; set; }
+        public int Memberid { get; set; }
+        public string Membername { get; set; }
+        public string Phonenumber { get; set; }
+        public int Salary { get; set; }
+        public string Gender { get; set; }
     }
 }

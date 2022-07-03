@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Models
 {
-    public class memberclaim
+    public class Memberclaim
     {
-        public int memberid { get; set; }
-        public int claimid { get; set; }
-        public int billedamount { get; set; }
-        public int claimedamount { get; set; }
-        public int benefitid { get; set; }
-        public string claimstatus { get; set; }
+        public int Memberid { get; set; }
+        public int Claimid { get; set; }
+        public int Billedamount { get; set; }
+        public int Claimedamount { get; set; }
+        public int Benefitid { get; set; }
+        public string Claimstatus { get; set; }
 
     }
 }

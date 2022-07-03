@@ -18,13 +18,13 @@ namespace membermicroservice.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class memberController : ControllerBase
+    public class MemberController : ControllerBase
     {
-        Imemberclaimrepo repo;
-        readonly log4net.ILog _log4net;
-        public memberController(Imemberclaimrepo _rep)
+        private readonly IMemberclaimrepo repo;
+        private readonly log4net.ILog _log4net;
+        public MemberController(IMemberclaimrepo _rep)
         {
-            _log4net = log4net.LogManager.GetLogger(typeof(memberController));
+            _log4net = log4net.LogManager.GetLogger(typeof(MemberController));
             repo = _rep;
 
         }
@@ -39,7 +39,7 @@ namespace membermicroservice.Controllers
         {
 
             _log4net.Info("MemberController Get View Claim Action Method is called!");
-            List<memberclaim> ls = new List<memberclaim>();
+            List<Memberclaim> ls = new List<Memberclaim>();
             ls = repo.getmyclaim(id);
             if (ls != null)
                 return Ok(ls);
@@ -55,7 +55,7 @@ namespace membermicroservice.Controllers
   
        
         [HttpPost]
-        public IActionResult Post([FromBody] memberclaim obj)//for submitting claims
+        public IActionResult Post([FromBody] Memberclaim obj)//for submitting claims
         {
             _log4net.Info("MemberController Submit Claim Action Method is called!");
            
@@ -71,10 +71,10 @@ namespace membermicroservice.Controllers
      /// <param name="obj"></param>
      /// <returns></returns>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] memberclaim obj)//for viewing claim status
+        public IActionResult Put(int id, [FromBody] Memberclaim obj)//for viewing claim status
         {
             _log4net.Info("MemberController View Claim Status Action Method is called!");
-            memberclaim ob = repo.viewClaimStatus(id, obj);
+            Memberclaim ob = repo.viewClaimStatus(id, obj);
             if (ob == null)
                 return BadRequest(ob);
             else

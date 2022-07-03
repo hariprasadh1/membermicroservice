@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Repository
 {
-    public class memberclaimrepo : Imemberclaimrepo
+    public class Memberclaimrepo : IMemberclaimrepo
     {
-        Uri baseAddress; 
-        HttpClient client;
+        private readonly Uri baseAddress; 
+        private readonly HttpClient client;
         IConfiguration _config;
-        public memberclaimrepo(IConfiguration config)
+        public Memberclaimrepo(IConfiguration config)
         {
              _config = config;
             baseAddress = new Uri(_config["Links:CLAIM"]);
@@ -23,7 +23,7 @@ namespace membermicroservice.Repository
             client.BaseAddress = baseAddress;
 
         }
-        public string submitClaim(memberclaim obj)
+        public string submitClaim(Memberclaim obj)
         {
             try
             {
@@ -39,15 +39,15 @@ namespace membermicroservice.Repository
             }
             catch (Exception e)
             {
-                return "Exception Occured";
+                return "Exception Occured"+e.Message;
             }
         }
 
-        public memberclaim viewClaimStatus(int id, memberclaim obj)
+        public Memberclaim viewClaimStatus(int id, Memberclaim obj)
         {
             try
             {
-                memberclaim ob = new memberclaim();
+                Memberclaim ob = new Memberclaim();
 
                 string data = JsonConvert.SerializeObject(obj);
 
@@ -59,7 +59,7 @@ namespace membermicroservice.Repository
                 {
 
                     string data1 = response.Content.ReadAsStringAsync().Result;
-                    ob = JsonConvert.DeserializeObject<memberclaim>(data);
+                    ob = JsonConvert.DeserializeObject<Memberclaim>(data);
 
                 }
 
@@ -75,9 +75,9 @@ namespace membermicroservice.Repository
 
 
 
-        public List<memberclaim> getmyclaim(int id)
+        public List<Memberclaim> getmyclaim(int id)
         {
-            List<memberclaim> ls = new List<memberclaim>();
+            List<Memberclaim> ls = new List<Memberclaim>();
 
 
             HttpResponseMessage response = client.GetAsync(client.BaseAddress).Result;//calls getall method in claim controller
@@ -87,16 +87,16 @@ namespace membermicroservice.Repository
 
                 string data = response.Content.ReadAsStringAsync().Result;
 
-                ls = JsonConvert.DeserializeObject<List<memberclaim>>(data);
+                ls = JsonConvert.DeserializeObject<List<Memberclaim>>(data);
 
             }
             //filtering process
 
-            List<memberclaim> ml = new List<memberclaim>();
+            List<Memberclaim> ml = new List<Memberclaim>();
 
-            foreach (memberclaim item in ls)
+            foreach (Memberclaim item in ls)
             {
-                if (item.memberid == id)
+                if (item.Memberid == id)
                 {
                     ml.Add(item);
                 }

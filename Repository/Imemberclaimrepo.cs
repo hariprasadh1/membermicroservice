@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace membermicroservice.Repository
 {
-    public interface Imemberclaimrepo
+    public interface IMemberclaimrepo
     {
-        public string submitClaim(memberclaim obj);
-        public memberclaim viewClaimStatus(int id, memberclaim obj);
+        public string submitClaim(Memberclaim obj);
+        public Memberclaim viewClaimStatus(int id, Memberclaim obj);
 
-        public List<memberclaim> getmyclaim(int id);
+        public List<Memberclaim> getmyclaim(int id);
     }
 }
